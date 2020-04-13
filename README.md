@@ -21,6 +21,15 @@
 
     docker-compose up elasticsearch
 
+## Using the ElasticSearch Web API
+
+    $ curl 'http://localhost:9200/_cat/nodes?v'
+    ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role master name
+    172.18.0.2           16          35   1    0.27    0.21     0.13 dilm      *      71ecc2feb242
+
+    $ curl -X PUT 'http://localhost:9200/twitter'
+    {"acknowledged":true,"shards_acknowledged":true,"index":"twitter"}
+
 ## References
 
 * https://github.com/simplesteph/kafka-stack-docker-compose/blob/master/zk-single-kafka-single.yml
