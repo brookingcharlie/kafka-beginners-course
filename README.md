@@ -20,3 +20,9 @@
 ## Running ElasticSearch using Docker
 
     docker-compose up elasticsearch
+
+## References
+
+* https://github.com/simplesteph/kafka-stack-docker-compose/blob/master/zk-single-kafka-single.yml
+* https://github.com/confluentinc/cp-demo/blob/master/docker-compose.yml
+* https://docs.confluent.io/current/quickstart/cos-docker-quickstart.html
