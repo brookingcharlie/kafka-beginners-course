@@ -98,10 +98,10 @@ public class TwitterProducer {
         Hosts hosts = new HttpHosts(Constants.STREAM_HOST);
 
         Authentication authentication = new OAuth1(
-                System.getProperty("twitter.consumerKey"),
-                System.getProperty("twitter.consumerSecret"),
-                System.getProperty("twitter.token"),
-                System.getProperty("twitter.secret")
+                System.getProperty("twitter.oauth.consumerKey"),
+                System.getProperty("twitter.oauth.consumerSecret"),
+                System.getProperty("twitter.oauth.accessToken"),
+                System.getProperty("twitter.oauth.accessTokenSecret")
         );
 
         StatusesFilterEndpoint endpoint = new StatusesFilterEndpoint();
