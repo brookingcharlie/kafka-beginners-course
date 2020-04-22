@@ -13,7 +13,7 @@ services:
       - ./data/zookeeper/data:/data
       - ./data/zookeeper/datalog:/datalog
   kafka:
-    image: confluentinc/cp-kafka:5.4.1
+    build: kafka
     container_name: kafka
     hostname: kafka
     ports:
@@ -27,6 +27,7 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1 # default is 3 but we only have one node!
     volumes:
       - ./data/kafka/data:/var/lib/kafka/data
+      - .:/mnt
     depends_on:
       - zookeeper
   elasticsearch:
